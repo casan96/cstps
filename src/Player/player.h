@@ -3,7 +3,6 @@
 #include <godot_cpp/classes/packed_scene.hpp>
 #include <godot_cpp/classes/ref.hpp>
 #include <godot_cpp/classes/rigid_body2d.hpp>
-#include <godot_cpp/classes/sprite2D.hpp>
 
 using namespace godot;
 class Player : public CharacterBody2D {

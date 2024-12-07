@@ -4,7 +4,6 @@
 #include <godot_cpp/variant/utility_functions.hpp>
 #include <godot_cpp/classes/scene_tree.hpp>
 #include <godot_cpp/classes/window.hpp>
-#include <godot_cpp/classes/sprite2d.hpp>
 
 void Player::_bind_methods() {
     ClassDB::bind_method(D_METHOD("set_speed", "speed"), &Player::set_speed);
