@@ -4,9 +4,9 @@
 
 using namespace godot;
 
-class Lista : public Node2D {
-    GDCLASS(Lista, Node2D)
+class Weapon: public Node2D {
+    GDCLASS(Weapon, Node2D)
 
-protected:
+    protected:
     static void _bind_methods();
 };

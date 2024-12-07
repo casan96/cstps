@@ -4,8 +4,8 @@
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
 
-#include "player.h"
-#include "sumator.h"
+#include "Player/player.h"
+#include "Player/weapon.cpp"
 
 using namespace godot;
 
@@ -14,8 +14,8 @@ void initialize_gdextension_types(ModuleInitializationLevel p_level) {
 		return;
 	}
 	//GDREGISTER_CLASS(YourClass);
-	GDREGISTER_RUNTIME_CLASS(Sumator);
 	GDREGISTER_RUNTIME_CLASS(Player);
+	GDREGISTER_RUNTIME_CLASS(Weapon);
 }
 
 void uninitialize_gdextension_types(ModuleInitializationLevel p_level) {
