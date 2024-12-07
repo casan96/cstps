@@ -5,7 +5,7 @@
 #include <godot_cpp/godot.hpp>
 
 #include "Player/player.h"
-#include "Player/weapon.cpp"
+#include "Player/weapon.h"
 
 using namespace godot;
 

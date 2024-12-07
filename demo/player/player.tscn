@@ -1,17 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3d8wbcfuso3b"]
+[gd_scene load_steps=3 format=3 uid="uid://c3d8wbcfuso3b"]
 
 [ext_resource type="Texture2D" uid="uid://dbx66sovxd1" path="res://icon.svg" id="1_2g60u"]
-[ext_resource type="PackedScene" uid="uid://b2l0u4fxn5ux5" path="res://scenes/Ammo.tscn" id="1_po11q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03fg4"]
 size = Vector2(62, 18)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vlg21"]
-
 [node name="Player" type="Player"]
-gun_node = NodePath("Sprite2D")
-ammo_spawn_node = NodePath("Sprite2D/Spawn")
-ammo_scene = ExtResource("1_po11q")
 
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(0.464844, 0.419922)
@@ -20,12 +14,3 @@ texture = ExtResource("1_2g60u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_03fg4")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, 25)
-scale = Vector2(12, 12)
-texture = SubResource("PlaceholderTexture2D_vlg21")
-offset = Vector2(0.5, 0)
-
-[node name="Spawn" type="Node2D" parent="Sprite2D"]
-position = Vector2(20, 0)
