@@ -6,6 +6,7 @@
 
 #include "Player/player.h"
 #include "Player/weapon.h"
+#include "Player/ammo.hpp"
 
 using namespace godot;
 
@@ -16,6 +17,7 @@ void initialize_gdextension_types(ModuleInitializationLevel p_level) {
 	//GDREGISTER_CLASS(YourClass);
 	GDREGISTER_RUNTIME_CLASS(Player);
 	GDREGISTER_RUNTIME_CLASS(Weapon);
+	GDREGISTER_RUNTIME_CLASS(Ammo);
 }
 
 void uninitialize_gdextension_types(ModuleInitializationLevel p_level) {

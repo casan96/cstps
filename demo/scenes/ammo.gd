@@ -1,4 +1,4 @@
-extends Node2D
+extends Ammo
 
 @export var time:Timer
 

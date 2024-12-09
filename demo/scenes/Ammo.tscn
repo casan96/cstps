@@ -1,12 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2l0u4fxn5ux5"]
-
-[ext_resource type="Script" path="res://scenes/ammo.gd" id="1_vxpu6"]
+[gd_scene load_steps=2 format=3 uid="uid://b2l0u4fxn5ux5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7glca"]
 
-[node name="Ammo" type="Node2D" node_paths=PackedStringArray("time")]
-script = ExtResource("1_vxpu6")
-time = NodePath("Timer")
+[node name="Ammo" type="Ammo"]
+timer = NodePath("Timer")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.38419e-07, 2.84217e-14)
@@ -16,5 +13,3 @@ texture = SubResource("PlaceholderTexture2D_7glca")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

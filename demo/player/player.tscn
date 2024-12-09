@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3d8wbcfuso3b"]
+[gd_scene load_steps=5 format=3 uid="uid://c3d8wbcfuso3b"]
 
 [ext_resource type="Texture2D" uid="uid://dbx66sovxd1" path="res://icon.svg" id="1_2g60u"]
+[ext_resource type="PackedScene" uid="uid://w4krp2y21r0k" path="res://player/weapon.tscn" id="2_g0i8t"]
+[ext_resource type="PackedScene" uid="uid://b2l0u4fxn5ux5" path="res://scenes/Ammo.tscn" id="3_vdfhg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03fg4"]
 size = Vector2(62, 18)
 
 [node name="Player" type="Player"]
+gun_node = NodePath("Weapon")
 
 [node name="Icon" type="Sprite2D" parent="."]
 scale = Vector2(0.464844, 0.419922)
@@ -14,3 +17,8 @@ texture = ExtResource("1_2g60u")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_03fg4")
+
+[node name="Weapon" parent="." instance=ExtResource("2_g0i8t")]
+ammo_scene = ExtResource("3_vdfhg")
+ammo_speed = 3000
+position = Vector2(0, 26)
