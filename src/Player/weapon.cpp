@@ -22,8 +22,8 @@ void Weapon::_bind_methods() {
 
 	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "ammo_scene", godot::PROPERTY_HINT_RESOURCE_TYPE, "PackedScene"), "set_ammo_scene", "get_ammo_scene");
 
-	ClassDB::bind_method(D_METHOD("set_ammo_speed", "sp"),&Weapon::set_ammo_speed);
-	ClassDB::bind_method(D_METHOD("get_ammo_speed"),&Weapon::get_ammo_speed);
+	ClassDB::bind_method(D_METHOD("set_ammo_speed", "sp"), &Weapon::set_ammo_speed);
+	ClassDB::bind_method(D_METHOD("get_ammo_speed"), &Weapon::get_ammo_speed);
 
 	ADD_PROPERTY(PropertyInfo(Variant::INT, "ammo_speed"), "set_ammo_speed", "get_ammo_speed");
 }

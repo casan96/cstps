@@ -20,5 +20,4 @@ shape = SubResource("RectangleShape2D_03fg4")
 
 [node name="Weapon" parent="." instance=ExtResource("2_g0i8t")]
 ammo_scene = ExtResource("3_vdfhg")
-ammo_speed = 3000
 position = Vector2(0, 26)

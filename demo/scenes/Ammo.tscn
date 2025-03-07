@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2l0u4fxn5ux5"]
+[gd_scene load_steps=3 format=3 uid="uid://b2l0u4fxn5ux5"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7glca"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afknq"]
+size = Vector2(8, 9)
+
 [node name="Ammo" type="Ammo"]
 timer = NodePath("Timer")
+collision_shape = NodePath("CollisionShape2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.38419e-07, 2.84217e-14)
@@ -13,3 +17,7 @@ texture = SubResource("PlaceholderTexture2D_7glca")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_afknq")
