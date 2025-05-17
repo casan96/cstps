@@ -1,6 +1,7 @@
 #include "weapon.h"
 #include "ammo.hpp"
 #include "godot_cpp/classes/global_constants.hpp"
+#include "godot_cpp/classes/node.hpp"
 #include "godot_cpp/classes/node2d.hpp"
 #include "godot_cpp/classes/object.hpp"
 #include "godot_cpp/core/class_db.hpp"
@@ -31,13 +32,21 @@ void Weapon::_bind_methods() {
 void Weapon::_process(double delta) {
 	auto pos = get_global_mouse_position();
 	look_at(pos);
+}
 
-	if (Input::get_singleton()->is_action_just_pressed("shot") && ammo_scene->can_instantiate()) {
+void Weapon::_ready() {
+	if (!ammo_path.is_empty()) {
+		ammo_spawn_point = get_node<Node2D>(ammo_path);
+	}
+}
+
+void Weapon::shoot(Node *spawn) {
+	if (ammo_scene->can_instantiate() && ammo_spawn_point) {
 		Ammo *bullet = Object::cast_to<Ammo>(ammo_scene->instantiate());
-		Vector2 s_pos = get_node<Node2D>(ammo_path)->get_global_position();
+		Vector2 s_pos = ammo_spawn_point->get_global_position();
 		bullet->set_direction(get_global_position().angle_to_point(s_pos));
 		bullet->set_global_position(s_pos);
 		bullet->set_speed(ammo_speed);
-		get_tree()->get_root()->add_child(bullet);
+		spawn->add_child(bullet);
 	}
 }

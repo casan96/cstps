@@ -1,4 +1,5 @@
 #pragma once
+#include "weapon.h"
 #include <godot_cpp/classes/character_body2d.hpp>
 #include <godot_cpp/classes/packed_scene.hpp>
 #include <godot_cpp/classes/ref.hpp>
@@ -8,9 +9,11 @@ using namespace godot;
 class Player : public CharacterBody2D {
 	GDCLASS(Player, CharacterBody2D)
 
-	int speed{100};
+	int speed{ 100 };
 
 	NodePath gun{};
+	Weapon *gun_node{};
+
 protected:
 	static void _bind_methods();
 	void _notification(int what);

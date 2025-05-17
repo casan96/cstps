@@ -1,12 +1,11 @@
-#include "register_types.h"
 #include <gdextension_interface.h>
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
 
+#include "Player/ammo.hpp"
 #include "Player/player.h"
 #include "Player/weapon.h"
-#include "Player/ammo.hpp"
 
 using namespace godot;
 

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dclyexfyhfc0o"]
+
+[ext_resource type="Texture2D" uid="uid://b1ptqbv0tvf8f" path="res://assets/Urban_RPG/tilemap.png" id="1_hfw86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43ixs"]
+size = Vector2(16, 7)
+
+[node name="balla" type="StaticBody2D"]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+texture = ExtResource("1_hfw86")
+region_enabled = true
+region_rect = Rect2(84.5325, 137.993, 17.0632, 15.288)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_43ixs")

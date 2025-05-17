@@ -1,23 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3d8wbcfuso3b"]
+[gd_scene load_steps=7 format=3 uid="uid://c3d8wbcfuso3b"]
 
-[ext_resource type="Texture2D" uid="uid://dbx66sovxd1" path="res://icon.svg" id="1_2g60u"]
+[ext_resource type="Texture2D" uid="uid://b1ptqbv0tvf8f" path="res://assets/Urban_RPG/tilemap.png" id="1_oul6g"]
 [ext_resource type="PackedScene" uid="uid://w4krp2y21r0k" path="res://player/weapon.tscn" id="2_g0i8t"]
 [ext_resource type="PackedScene" uid="uid://b2l0u4fxn5ux5" path="res://scenes/Ammo.tscn" id="3_vdfhg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03fg4"]
-size = Vector2(62, 18)
+size = Vector2(9, 2)
+
+[sub_resource type="Animation" id="Animation_g1dw6"]
+resource_name = "Idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yw30f"]
+_data = {
+&"Idle": SubResource("Animation_g1dw6")
+}
 
 [node name="Player" type="Player"]
 gun_node = NodePath("Weapon")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.464844, 0.419922)
-texture = ExtResource("1_2g60u")
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(0, -9)
+texture = ExtResource("1_oul6g")
+hframes = 4
+frame = 1
+region_enabled = true
+region_rect = Rect2(390.569, 1.14441e-05, 67.2073, 17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 17)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_03fg4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
 
 [node name="Weapon" parent="." instance=ExtResource("2_g0i8t")]
 ammo_scene = ExtResource("3_vdfhg")
-position = Vector2(0, 26)
+visible = false
+position = Vector2(-2, 7)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_yw30f")
+}

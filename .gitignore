@@ -18,7 +18,7 @@ demo/bin/windows/*
 !demo/bin/windows/.gitkeep
 !demo/bin/*.gdextension
 .sconsign*.dblite
-bin/*
+bin
 build
 
 # Ignore custom.py
@@ -52,6 +52,7 @@ compile_commands.json
 *.log
 .clangd
 .gdignore
+.cache/
 
 # VSCode
 .vscode/*
@@ -60,3 +61,5 @@ compile_commands.json
 
 # Jetbrains
 .idea/
+bin/windows/cstps.windows.template_debug.x86_64.dll
+demo/assets/*
