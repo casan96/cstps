@@ -1,6 +1,5 @@
 #pragma once
 
-#include "ammo.hpp"
 #include <godot_cpp/classes/node2d.hpp>
 #include <godot_cpp/classes/packed_scene.hpp>
 
