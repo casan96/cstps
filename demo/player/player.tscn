@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c3d8wbcfuso3b"]
 
-[ext_resource type="Texture2D" uid="uid://b1ptqbv0tvf8f" path="res://assets/Urban_RPG/tilemap.png" id="1_oul6g"]
+[ext_resource type="Texture2D" uid="uid://dbx66sovxd1" path="res://icon.svg" id="1_g1dw6"]
 [ext_resource type="PackedScene" uid="uid://w4krp2y21r0k" path="res://player/weapon.tscn" id="2_g0i8t"]
 [ext_resource type="PackedScene" uid="uid://b2l0u4fxn5ux5" path="res://scenes/Ammo.tscn" id="3_vdfhg"]
 
@@ -21,11 +21,9 @@ gun_node = NodePath("Weapon")
 [node name="Icon" type="Sprite2D" parent="."]
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(0, -9)
-texture = ExtResource("1_oul6g")
-hframes = 4
-frame = 1
-region_enabled = true
+position = Vector2(0, -10)
+scale = Vector2(0.15625, 0.15625)
+texture = ExtResource("1_g1dw6")
 region_rect = Rect2(390.569, 1.14441e-05, 67.2073, 17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

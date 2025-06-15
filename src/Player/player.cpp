@@ -46,7 +46,7 @@ void Player::_process(double delta) {
 	Vector2 position{};
 	position.x = input->get_axis("Left", "Right");
 	position.y = input->get_axis("Up", "Down");
-
+	
 	if (input->is_action_pressed("exit")) {
 		get_tree()->quit();
 	}

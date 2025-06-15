@@ -1,0 +1,2 @@
+CompileFlags:
+    Add: [-IC:\Users\camil\Projects\cstps\godot-cpp\gen\include, -IC:\Users\camil\Projects\cstps\godot-cpp\include, -IC:\Users\camil\Projects\cstps\godot-cpp\gdextension]
